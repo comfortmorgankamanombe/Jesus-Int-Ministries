@@ -1,0 +1,551 @@
+Adding Crossover 2026 Pictures to Ministries Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Ministries | JESUS International Ministries</title>
+  <link rel="icon" href="https://i.imgur.com/GxYY3ve.jpg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional styles for ministries page */
+    .ministries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .ministry-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .ministry-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .ministry-card i {
+      font-size: 3rem;
+      color: #d32f2f;
+      margin-bottom: 1.5rem;
+    }
+    
+    .ministry-card h3 {
+      color: #333;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+    
+    .ministry-card p {
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2.5rem;
+      color: #d32f2f;
+      margin-bottom: 0.5rem;
+    }
+    
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Sermons section styles */
+    .sermons-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 4rem 0;
+      margin: 3rem 0;
+    }
+    
+    .sermon-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 2rem;
+    }
+    
+    .sermon-header {
+      border-bottom: 2px solid #d32f2f;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .sermon-date {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .sermon-title {
+      color: #d32f2f;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .scripture-reference {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-left: 4px solid #d32f2f;
+      margin: 1.5rem 0;
+      font-style: italic;
+    }
+    
+    .sermon-points {
+      margin: 1.5rem 0;
+    }
+    
+    .sermon-points h4 {
+      color: #333;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .sermon-points ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .sermon-points li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.6;
+    }
+    
+    .sermon-points li:before {
+      content: "•";
+      color: #d32f2f;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    .key-verse {
+      background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    
+    @media (max-width: 768px) {
+      .ministries-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .sermon-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-main" style="color: red;">JESUS</span>
+      <span class="logo-highlight" style="color: red;">International</span>
+      <span class="logo-main" style="color: red;">Ministries</span>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="ministries.html" class="nav-link active">Ministries</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="testimonies.html" class="nav-link">Testimonies</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="index.html#faq" class="nav-link">FAQs</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="donate.html" class="nav-link donate-btn">Donate</a></li>
+    </ul>
+    
+    <div class="hamburger" aria-label="Mobile menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+  <!-- Ministries Section -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h2>Our Ministries</h2>
+        <p class="section-subtitle">Serving in multiple areas</p>
+      </header>
+      
+      <div class="ministries-grid">
+        <div class="ministry-card">
+          <i class="fas fa-church"></i>
+          <h3>Sunday Service</h3>
+          <p>Join us every Sunday from 8:00 AM for powerful worship, prophecy, undiluted word of God, and miracles</p>
+        </div>
+        
+        <div class="ministry-card">
+          <i class="fas fa-hands-praying"></i>
+          <h3>Prayer Ministry</h3>
+          <p>We pray with believers during our services for deliverance and breakthroughs</p>
+        </div>
+        
+        <div class="ministry-card">
+          <i class="fas fa-child"></i>
+          <h3>Children's Ministry</h3>
+          <p>Special services for kids every Sunday during main service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly Sermons Section -->
+  <section class="sermons-section">
+    <div class="container">
+      <header class="section-header">
+        <h2>Weekly Sermons</h2>
+        <p class="section-subtitle">Biblical teachings for spiritual growth</p>
+      </header>
+      
+      <!-- May 10, 2026 Sermon -->
+      <div class="sermon-card">
+        <div class="sermon-header">
+          <div class="sermon-date">Latest Sermon - May 10, 2026</div>
+          <h3 class="sermon-title">Staying in the Lord</h3>
+        </div>
+
+        <div class="scripture-reference">
+          <strong>Main Scripture:</strong> John 15:7 - "If you abide in Me, and My words abide in you, ask whatever you wish, and it will be done for you."
+        </div>
+
+        <div class="sermon-content">
+          <p>In this powerful teaching, we are reminded of the importance of staying connected to Jesus Christ. Just as a branch cannot bear fruit unless it remains in the vine, we cannot live victoriously unless we abide in the Lord. This message also confronts us with who we were before Christ and calls us to walk in obedience in every area of life.</p>
+
+          <div class="scripture-reference">
+            <strong>Ephesians 2:1</strong> - "And you were dead in the trespasses and sins."
+          </div>
+
+          <div class="scripture-reference">
+            <strong>Ephesians 2:2</strong> - "In which you once walked, following the course of this world, following the prince of the power of the air, the spirit that is now at work in the sons of disobedience."
+          </div>
+
+          <div class="scripture-reference">
+            <strong>Ephesians 2:3</strong> - "Among whom we all once lived in the passions of our flesh, carrying out the desires of the body and the mind, and were by nature children of wrath, like the rest of mankind."
+          </div>
+
+          <div class="scripture-reference">
+            <strong>Ephesians 6:1</strong> - "Children, obey your parents in the Lord, for this is right."
+          </div>
+
+          <div class="sermon-points">
+            <h4>Key Points:</h4>
+            <ul>
+              <li><strong>Abide in Christ:</strong> To stay in the Lord means to let His Word dwell in you constantly — John 15:7</li>
+              <li><strong>Our Old Nature:</strong> Before Christ, we were dead in sin and followed the ways of this world — Ephesians 2:1–2</li>
+              <li><strong>Children of Wrath:</strong> Our old self was driven by the flesh; we were by nature under God's judgment — Ephesians 2:3</li>
+              <li><strong>Obedience in the Home:</strong> Staying in the Lord extends to obeying our parents, for this is right before God — Ephesians 6:1</li>
+            </ul>
+          </div>
+
+          <div class="key-verse">
+            "If you abide in Me, and My words abide in you, ask whatever you wish, and it will be done for you." — John 15:7
+          </div>
+
+          <p><strong>Application:</strong> Examine whether you are truly abiding in Christ or drifting toward the ways of the world. Remember what you were saved from (Ephesians 2:1–3) and choose daily to remain in Him. Let obedience — in your home, your family, and your walk — be the evidence that you are truly staying in the Lord.</p>
+        </div>
+      </div>
+
+      <!-- Previous Sermon - November 23rd -->
+      <div class="sermon-card">
+        <div class="sermon-header">
+          <div class="sermon-date">Latest Sermon - November 23, 2025</div>
+          <h3 class="sermon-title">Stopping Evil Family Patterns</h3>
+        </div>
+        
+        <div class="scripture-reference">
+          <strong>Main Scripture:</strong> Matthew 10:36 - "A man's enemies will be the members of his own household."
+        </div>
+        
+        <div class="sermon-content">
+          <p>In this powerful teaching, we explore how evil family patterns can be passed down through generations and how to break these cycles through the power of Jesus Christ. Many families struggle with recurring issues like specific illnesses, financial struggles, relationship breakdowns, or addictions that seem to repeat generation after generation.</p>
+          
+          <div class="sermon-points">
+            <h4>Key Revelations:</h4>
+            <ul>
+              <li><strong>Spirits in Charge of Households:</strong> There are spiritual forces that can establish strongholds over families</li>
+              <li><strong>Generational Patterns:</strong> Illnesses, addictions, poverty, and relationship failures can become family patterns</li>
+              <li><strong>The Power of Being Born Again:</strong> Salvation in Jesus Christ breaks the chain of generational curses</li>
+              <li><strong>Spiritual Warfare:</strong> We must actively fight against these patterns through prayer and spiritual authority</li>
+              <li><strong>Renewing the Mind:</strong> Breaking free requires changing thought patterns and behaviors</li>
+            </ul>
+          </div>
+          
+          <div class="scripture-reference">
+            <strong>Supporting Scripture:</strong> Exodus 20:5 - "I, the Lord your God, am a jealous God, punishing the children for the sin of the parents to the third and fourth generation of those who hate me."
+          </div>
+          
+          <div class="sermon-points">
+            <h4>Common Evil Family Patterns:</h4>
+            <ul>
+              <li><strong>Health Patterns:</strong> When a mother has a certain illness, the daughter often develops the same condition</li>
+              <li><strong>Financial Patterns:</strong> Generational poverty or inability to maintain wealth</li>
+              <li><strong>Relationship Patterns:</strong> Divorce, infidelity, or abuse repeating across generations</li>
+              <li><strong>Addiction Patterns:</strong> Alcoholism, drug abuse, or other destructive habits</li>
+              <li><strong>Spiritual Patterns:</strong> Resistance to the gospel, occult involvement, or religious legalism</li>
+            </ul>
+          </div>
+          
+          <div class="sermon-points">
+            <h4>How to Break Evil Family Patterns:</h4>
+            <ul>
+              <li><strong>Accept Jesus Christ:</strong> Being born again is the first and most important step to breaking generational curses</li>
+              <li><strong>Renounce Family Sins:</strong> Specifically identify and verbally renounce the patterns you want to break</li>
+              <li><strong>Prayer of Deliverance:</strong> Engage in targeted prayer against the spirits maintaining these patterns</li>
+              <li><strong>Fill the Void:</strong> Replace negative patterns with godly habits and thought processes</li>
+              <li><strong>Walk in Obedience:</strong> Consistent obedience to God's Word maintains your freedom</li>
+              <li><strong>Community Support:</strong> Connect with other believers who can support your journey</li>
+            </ul>
+          </div>
+          
+          <div class="key-verse">
+            "Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!" - 2 Corinthians 5:17
+          </div>
+          
+          <p><strong>Application:</strong> This week, identify any negative patterns in your family history. Write them down and specifically pray against each one. Renounce any involvement with these patterns and declare your freedom in Christ. Remember that through Jesus, you are no longer bound by your family's past. You have been made new and can establish godly patterns for future generations.</p>
+          
+          <div class="scripture-reference" style="background: #e8f5e8; border-left-color: #4caf50;">
+            <strong>Promise:</strong> "So if the Son sets you free, you will be free indeed." - John 8:36
+          </div>
+        </div>
+      </div>
+      
+      <!-- Previous Sermons -->
+      <div class="sermon-card">
+        <div class="sermon-header">
+          <div class="sermon-date">November 2, 2025</div>
+          <h3 class="sermon-title">Obedience to the Voice of the Lord</h3>
+        </div>
+        
+        <div class="scripture-reference">
+          <strong>Main Scripture:</strong> 1 Samuel 15:22 - "But Samuel replied: 'Does the Lord delight in burnt offerings and sacrifices as much as in obeying the Lord? To obey is better than sacrifice, and to heed is better than the fat of rams.'"
+        </div>
+        
+        <div class="sermon-content">
+          <p>In this powerful teaching, we explore the fundamental principle of obedience to God's voice. Being used by God doesn't necessarily mean you are called - sometimes God uses vessels for specific moments and purposes. True spiritual authority that God's people have is a reward for their obedience.</p>
+          
+          <div class="sermon-points">
+            <h4>Key Revelations:</h4>
+            <ul>
+              <li><strong>Obedience vs. Sacrifice:</strong> God values our obedience more than our religious rituals and sacrifices</li>
+              <li><strong>Parental Heart of God:</strong> It hurts our Heavenly Father when His children don't follow His instructions, just as it hurts earthly parents</li>
+              <li><strong>Being Used vs. Being Called:</strong> The donkey that talked to Balaam didn't mean it was called, but it was needed at that moment for God's purpose</li>
+              <li><strong>Spiritual Authority:</strong> The spiritual authority that God's people have is a direct reward for their obedience</li>
+              <li><strong>Mary's Instruction:</strong> As Mary told the servants at the wedding in Cana - "Do whatever he tells you" (John 2:5)</li>
+            </ul>
+          </div>
+          
+          <div class="scripture-reference">
+            <strong>Supporting Scripture:</strong> John 2:5 - "His mother said to the servants, 'Do whatever he tells you.'"
+          </div>
+          
+          <div class="sermon-points">
+            <h4>The Power of Obedience:</h4>
+            <ul>
+              <li>When you obey Jesus, all who fight against you will bow to you</li>
+              <li>Obedience positions you for divine protection and favor</li>
+              <li>Disobedience opens doors to spiritual attacks and limitations</li>
+              <li>Partial obedience is still disobedience in God's eyes</li>
+              <li>Delayed obedience is a form of disobedience</li>
+            </ul>
+          </div>
+          
+          <div class="sermon-points">
+            <h4>Practical Steps to Cultivate Obedience:</h4>
+            <ul>
+              <li><strong>Listen Attentively:</strong> Develop a habit of listening for God's voice through prayer and Scripture</li>
+              <li><strong>Immediate Response:</strong> When God speaks, respond immediately without hesitation</li>
+              <li><strong>Complete Obedience:</strong> Follow God's instructions fully, not partially</li>
+              <li><strong>Trust God's Wisdom:</strong> Even when His commands don't make sense naturally, trust His higher wisdom</li>
+              <li><strong>Accountability:</strong> Share your spiritual journey with trusted believers who can help you stay obedient</li>
+            </ul>
+          </div>
+          
+          <div class="key-verse">
+            "But Samuel replied: 'Does the Lord delight in burnt offerings and sacrifices as much as in obeying the Lord? To obey is better than sacrifice, and to heed is better than the fat of rams.'" - 1 Samuel 15:22
+          </div>
+          
+          <p><strong>Application:</strong> This week, examine areas in your life where you may be offering sacrifices (religious activities, good works) instead of simple obedience to God's specific instructions. Ask God to reveal any areas of disobedience or partial obedience. Commit to following Mary's instruction to the servants: "Do whatever he tells you." Remember that obedience is better than sacrifice, and true spiritual authority comes from walking in complete submission to God's voice.</p>
+          
+          <div class="scripture-reference" style="background: #e8f5e8; border-left-color: #4caf50;">
+            <strong>Promise:</strong> "If you are willing and obedient, you will eat the good things of the land." - Isaiah 1:19
+          </div>
+        </div>
+      </div>
+      
+      <!-- October 26th Sermon -->
+      <div class="sermon-card">
+        <div class="sermon-header">
+          <div class="sermon-date">October 26, 2025</div>
+          <h3 class="sermon-title">Knowing God's Ways vs. God's Acts</h3>
+        </div>
+        
+        <div class="scripture-reference">
+          <strong>Main Scripture:</strong> Psalm 103:7 - "He made known his ways to Moses, his deeds to the people of Israel."
+        </div>
+        
+        <div class="sermon-content">
+          <p>In today's teaching, we explore the crucial difference between knowing God's acts and knowing God's ways. Many believers only seek what God can <em>do</em> for them (His acts), but true spiritual maturity comes from seeking to know God's <em>ways</em> - His character, His nature, and how He operates.</p>
+          
+          <div class="sermon-points">
+            <h4>Key Revelations:</h4>
+            <ul>
+              <li><strong>God's Acts</strong> are what He does - the miracles, healings, and breakthroughs we experience</li>
+              <li><strong>God's Ways</strong> are who He is - His character, principles, and eternal purposes</li>
+              <li>Moses knew God's ways intimately, while Israel only saw God's acts in the wilderness</li>
+              <li>Seeking God's ways leads to deeper relationship and sustained blessings</li>
+              <li>When we know God's ways, we understand why He does what He does</li>
+            </ul>
+          </div>
+          
+          <div class="scripture-reference">
+            <strong>Supporting Scripture:</strong> 1 Thessalonians 5:16-18 - "Rejoice always, pray continually, give thanks in all circumstances; for this is God's will for you in Christ Jesus."
+          </div>
+          
+          <div class="sermon-points">
+            <h4>The Power of Spiritual Gifts:</h4>
+            <ul>
+              <li>Spiritual gifts are divine enablements that open doors for ministry</li>
+              <li>Your gift makes room for you and brings you before great people</li>
+              <li>Operating in your spiritual gifts positions you for divine opportunities</li>
+              <li>Gifts are given not for personal glory but for building God's kingdom</li>
+              <li>When you function in your gifts, you align with God's ways rather than just seeking His acts</li>
+            </ul>
+          </div>
+          
+          <div class="key-verse">
+            "He made known his ways to Moses, his deeds to the people of Israel." - Psalm 103:7
+          </div>
+          
+          <p><strong>Application:</strong> This week, shift your focus from merely seeking what God can do for you to seeking to know God Himself. Study His character in Scripture, spend time in His presence, and ask Him to reveal His ways to you. As you operate in your spiritual gifts, remember they are tools to demonstrate God's ways, not just His acts.</p>
+        </div>
+      </div>
+      
+      <!-- Space for future sermons -->
+      <div style="text-align: center; margin-top: 2rem;">
+        <p><em>More sermons will be added weekly. Check back for new teachings!</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>JESUS International Ministries</h3>
+          <p>Preaching the Gospel to all nations since 2020</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="testimonies.html">Testimonies</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="index.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Service Times</h4>
+          <p><i class="fas fa-clock"></i> Sundays from 8:00 AM</p>
+          <p><i class="fas fa-map-marker-alt"></i> Rusununguko Street, New Marimba</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+263772401528">+263 772 401 528</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 JESUS International Ministries. All Rights Reserved.</p>
+        <p>Founded in 2020 by Prophet J. Chikambure under Prophet T.B. Joshua</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1AkiKS8Uua/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/263785585244" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/prophetchikambure_official" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@JerryChikambure-official1" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <aside class="chatbot-container" id="chatbot" aria-label="Ministry assistant chatbot">
+    <header class="chatbot-header">
+      <span class="chatbot-label">AI Chatbot</span>
+      <h3>Ministry Prayer Assistant</h3>
+      <button class="close-chat" aria-label="Close chatbot">&times;</button>
+    </header>
+    
+    <div class="chatbot-messages" id="chat-messages">
+      <div class="message bot-message">
+        <div class="message-content">
+          <p>Hello! I'm here to help you. You can ask about:</p>
+          <ul>
+            <li>Service times (Sundays from 8:00 AM)</li>
+            <li>Prayer requests</li>
+            <li>Ministry programs</li>
+            <li>Location directions</li>
+            <li>Recent sermons</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Type your message..." aria-label="Type your message">
+      <button id="send-btn" aria-label="Send message" class="send-btn">
+        <i class="fas fa-paper-plane"></i>
+        <span class="send-text">Send</span>
+      </button>
+    </div>
+  </aside>
+
+  <button class="chatbot-btn" id="chatbot-toggler" aria-label="Open chatbot">
+    <i class="fas fa-comment-dots"></i>
+  </button>
+
+  <!-- Church Logo -->
+  <div class="church-logo">
+    <img src="https://i.imgur.com/GxYY3ve.jpg" alt="JESUS International Ministries Logo">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

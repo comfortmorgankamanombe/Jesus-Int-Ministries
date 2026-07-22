@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Events | JESUS International Ministries</title>
+  <link rel="icon" href="https://i.imgur.com/GxYY3ve.jpg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional styles for events page */
+    .events-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .event-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .event-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .event-header {
+      background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .event-date {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    
+    .event-month {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    .event-content {
+      padding: 1.5rem;
+    }
+    
+    .event-title {
+      color: #d32f2f;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .event-details {
+      margin-bottom: 1.5rem;
+    }
+    
+    .event-detail {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+    
+    .event-detail i {
+      color: #d32f2f;
+      margin-right: 0.5rem;
+      width: 20px;
+    }
+    
+    .event-description {
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+    
+    .event-cta {
+      background: #d32f2f;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+    
+    .event-cta:hover {
+      background: #b71c1c;
+    }
+    
+    .no-events {
+      text-align: center;
+      padding: 3rem;
+      color: #666;
+    }
+    
+    .no-events i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-main" style="color: red;">JESUS</span>
+      <span class="logo-highlight" style="color: red;">International</span>
+      <span class="logo-main" style="color: red;">Ministries</span>
+    </div>
+    
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="ministries.html" class="nav-link">Ministries</a></li>
+      <li><a href="events.html" class="nav-link active">Events</a></li>
+      <li><a href="testimonies.html" class="nav-link">Testimonies</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="index.html#faq" class="nav-link">FAQs</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="donate.html" class="nav-link donate-btn">Donate</a></li>
+    </ul>
+    
+    <div class="hamburger" aria-label="Mobile menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+  <!-- Events Section -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h2>Upcoming Events</h2>
+        <p class="section-subtitle">Join us for these special gatherings</p>
+      </header>
+      
+      <div class="events-container">
+        <!-- South Africa Outreach -->
+        <div class="event-card">
+          <img src="https://i.imgur.com/IbE3cuk.jpg" alt="South Africa Prophetic Healing Deliverance Outreach" style="width:100%; display:block; max-height:420px; object-fit:cover;">
+          <div class="event-content">
+            <h3 class="event-title">South Africa Prophetic Healing &amp; Deliverance Outreach</h3>
+
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Cape Town, South Africa</span>
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-user"></i>
+                <span>Prophet J. Chikambure</span>
+              </div>
+              <div class="event-detail">
+                <i class="fab fa-whatsapp"></i>
+                <span>+27842472703 &nbsp;|&nbsp; +27683597867</span>
+              </div>
+            </div>
+
+            <div class="event-description">
+              <p>JESUS International Ministries presents a powerful Prophetic Healing &amp; Deliverance Outreach coming to Cape Town, South Africa. Expect miracles, healings, and deliverance as Prophet J. Chikambure ministers under the anointing.</p>
+              <p><strong>Coming Soon!</strong> Contact our South Africa coordinators for more details and to register your attendance.</p>
+            </div>
+
+            <button class="event-cta" onclick="window.open('https://wa.me/27842472703','_blank')">
+              <i class="fab fa-whatsapp"></i> Contact SA Coordinator
+            </button>
+          </div>
+        </div>
+
+        <!-- Thanksgiving Service -->
+        <div class="event-card">
+          <div class="event-header">
+            <div class="event-date">07</div>
+            <div class="event-month">DECEMBER 2025</div>
+          </div>
+          <div class="event-content">
+            <h3 class="event-title">Annual Thanksgiving Service</h3>
+            
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-clock"></i>
+                <span>Sunday, 8:00 AM</span>
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Rusununguko Street, New Marimba</span>
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-user"></i>
+                <span>Prophet J. Chikambure & Ministry Team</span>
+              </div>
+            </div>
+            
+            <div class="event-description">
+              <p>Join us for our special Annual Thanksgiving Service as we give thanks to God for His faithfulness throughout the year. This powerful service will include:</p>
+              <ul>
+                <li>Special thanksgiving worship and praise</li>
+                <li>Testimonies of God's goodness</li>
+                <li>Prophetic ministration</li>
+                <li>Prayer for the coming year</li>
+                <li>Special offerings and thanksgiving sacrifices</li>
+              </ul>
+              <p><strong>Theme:</strong> "Enter His Gates with Thanksgiving"</p>
+            </div>
+            
+            <button class="event-cta">
+              <i class="fas fa-calendar-plus"></i> Mark Your Calendar
+            </button>
+          </div>
+        </div>
+        
+        <!-- Regular Sunday Service -->
+        <div class="event-card">
+          <div class="event-header" style="background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);">
+            <div class="event-date">EVERY</div>
+            <div class="event-month">SUNDAY</div>
+          </div>
+          <div class="event-content">
+            <h3 class="event-title" style="color: #1976d2;">Weekly Sunday Service</h3>
+            
+            <div class="event-details">
+              <div class="event-detail">
+                <i class="fas fa-clock"></i>
+                <span>Every Sunday, 8:00 AM</span>
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Rusununguko Street, New Marimba</span>
+              </div>
+              <div class="event-detail">
+                <i class="fas fa-user"></i>
+                <span>Prophet J. Chikambure</span>
+              </div>
+            </div>
+            
+            <div class="event-description">
+              <p>Join us every Sunday for powerful worship, undiluted word of God, prophecy, and miracles. Our regular services include:</p>
+              <ul>
+                <li>Anointed worship and praise</li>
+                <li>Life-changing messages from Scripture</li>
+                <li>Prophetic ministration</li>
+                <li>Prayer for healing and deliverance</li>
+                <li>Children's ministry available</li>
+              </ul>
+            </div>
+            
+            <button class="event-cta" style="background: #1976d2;">
+              <i class="fas fa-church"></i> Join Us This Sunday
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Past Events Notice -->
+      <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
+        <h3>Recent Events</h3>
+        <p>We recently had a powerful Living Water Service where many received breakthroughs and miracles. Check our <a href="testimonies.html" style="color: #d32f2f; font-weight: 600;">Testimonies page</a> to see what God is doing!</p>
+        <p><em>More events will be announced soon. Stay connected through our social media channels.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>JESUS International Ministries</h3>
+          <p>Preaching the Gospel to all nations since 2020</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="testimonies.html">Testimonies</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="index.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Service Times</h4>
+          <p><i class="fas fa-clock"></i> Sundays from 8:00 AM</p>
+          <p><i class="fas fa-map-marker-alt"></i> Rusununguko Street, New Marimba</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+263772401528">+263 772 401 528</a></p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 JESUS International Ministries. All Rights Reserved.</p>
+        <p>Founded in 2020 by Prophet J. Chikambure under Prophet T.B. Joshua</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1AkiKS8Uua/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/263785585244" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/prophetchikambure_official" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@JerryChikambure-official1" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <aside class="chatbot-container" id="chatbot" aria-label="Ministry assistant chatbot">
+    <header class="chatbot-header">
+      <span class="chatbot-label">AI Chatbot</span>
+      <h3>Ministry Prayer Assistant</h3>
+      <button class="close-chat" aria-label="Close chatbot">&times;</button>
+    </header>
+    
+    <div class="chatbot-messages" id="chat-messages">
+      <div class="message bot-message">
+        <div class="message-content">
+          <p>Hello! I'm here to help you. You can ask about:</p>
+          <ul>
+            <li>Service times (Sundays from 8:00 AM)</li>
+            <li>Prayer requests</li>
+            <li>Upcoming events</li>
+            <li>Location directions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Type your message..." aria-label="Type your message">
+      <button id="send-btn" aria-label="Send message" class="send-btn">
+        <i class="fas fa-paper-plane"></i>
+        <span class="send-text">Send</span>
+      </button>
+    </div>
+  </aside>
+
+  <button class="chatbot-btn" id="chatbot-toggler" aria-label="Open chatbot">
+    <i class="fas fa-comment-dots"></i>
+  </button>
+
+  <!-- Church Logo -->
+  <div class="church-logo">
+    <img src="https://i.imgur.com/GxYY3ve.jpg" alt="JESUS International Ministries Logo">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

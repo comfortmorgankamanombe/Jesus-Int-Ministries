@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | JESUS International Ministries</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://i.imgur.com/GxYY3ve.jpg" type="image/jpeg">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-main" style="color: red;">JESUS</span>
+      <span class="logo-highlight" style="color: red;">International</span>
+      <span class="logo-main" style="color: red;">Ministries</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="ministries.html" class="nav-link">Ministries</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="testimonies.html" class="nav-link">Testimonies</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="index.html#faq" class="nav-link">FAQs</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="donate.html" class="nav-link active donate-btn">Donate</a></li>
+    </ul>
+
+    <div class="hamburger" aria-label="Mobile menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+  <!-- Donate Section -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h2>Donate to the Ministry</h2>
+        <p class="section-subtitle">Your support helps us reach more souls</p>
+      </header>
+
+      <form id="donationForm" class="donation-form" onsubmit="return sendToWhatsApp(this, 'donation')">
+        <div class="form-group">
+          <label for="donor-name">Your Name</label>
+          <input type="text" id="donor-name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="donor-phone">Your Phone</label>
+          <input type="tel" id="donor-phone" name="phone" placeholder="Your Phone Number" required>
+        </div>
+        <div class="form-group">
+          <label for="donation-amount">Amount (USD)</label>
+          <input type="number" id="donation-amount" name="amount" placeholder="Amount (USD)" required>
+        </div>
+        <div class="form-group">
+          <label>Payment Method</label>
+            <p>Ecocash: +263 772 401 528 (E. Saupinda)</p>
+            <p>Bank Transfer: Details available on request</p>
+        </div>
+        <button type="submit" class="btn-gold">Donate via WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>JESUS International Ministries</h3>
+          <p>Preaching the Gospel to all nations since 2020</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="testimonies.html">Testimonies</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="index.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Service Times</h4>
+          <p><i class="fas fa-clock"></i> Sundays from 8:00 AM</p>
+          <p><i class="fas fa-map-marker-alt"></i> Rusununguko Street, New Marimba</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+263772401528">+263 772 401 528</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 JESUS International Ministries. All Rights Reserved.</p>
+        <p>Founded in 2020 by Prophet J. Chikambure under Prophet T.B. Joshua</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1AkiKS8Uua/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/263785585244" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/prophetchikambure_official" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@JerryChikambure-official1" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <aside class="chatbot-container" id="chatbot" aria-label="Ministry assistant chatbot">
+    <header class="chatbot-header">
+      <span class="chatbot-label">AI Chatbot</span>
+      <h3>Ministry Prayer Assistant</h3>
+      <button class="close-chat" aria-label="Close chatbot">&times;</button>
+    </header>
+
+    <div class="chatbot-messages" id="chat-messages">
+      <div class="message bot-message">
+        <div class="message-content">
+          <p>Hello! I'm here to help you. You can ask about:</p>
+          <ul>
+            <li>Service times (Sundays from 8:00 AM)</li>
+            <li>Prayer requests</li>
+            <li>Ministry programs</li>
+            <li>Location directions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Type your message..." aria-label="Type your message">
+      <button id="send-btn" aria-label="Send message" class="send-btn">
+        <i class="fas fa-paper-plane"></i>
+        <span class="send-text">Send</span>
+      </button>
+    </div>
+  </aside>
+
+  <button class="chatbot-btn" id="chatbot-toggler" aria-label="Open chatbot">
+    <i class="fas fa-comment-dots"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <!-- Church Logo -->
+<div class="church-logo">
+  <img src="https://i.imgur.com/GxYY3ve.jpg" alt="JESUS International Ministries Logo">
+</div>
+</body>
+</html>

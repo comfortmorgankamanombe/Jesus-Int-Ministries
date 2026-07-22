@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Word | JESUS International Ministries</title>
+  <link rel="icon" href="https://i.imgur.com/GxYY3ve.jpg" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sermons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .sermon-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sermon-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.13);
+    }
+
+    .sermon-header {
+      background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .sermon-date-badge {
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 0.6rem 1rem;
+      text-align: center;
+      min-width: 70px;
+    }
+
+    .sermon-date-badge .day {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .sermon-date-badge .month-year {
+      font-size: 0.75rem;
+      opacity: 0.9;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .sermon-title-area h2 {
+      font-size: 1.4rem;
+      margin: 0 0 0.3rem;
+    }
+
+    .sermon-title-area .sermon-preacher {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    .sermon-body {
+      padding: 2rem;
+    }
+
+    .sermon-theme {
+      background: #fff8f8;
+      border-left: 4px solid #d32f2f;
+      padding: 0.8rem 1.2rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 1.5rem;
+      color: #d32f2f;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .scripture-block {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .scripture-ref {
+      font-weight: 700;
+      color: #d32f2f;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .scripture-ref i {
+      font-size: 0.9rem;
+    }
+
+    .scripture-text {
+      font-style: italic;
+      color: #444;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .sermon-notes {
+      margin-top: 1.5rem;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .sermon-notes h4 {
+      color: #d32f2f;
+      margin-bottom: 0.6rem;
+    }
+
+    .sermon-notes ul {
+      padding-left: 1.4rem;
+    }
+
+    .sermon-notes ul li {
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-main" style="color: red;">JESUS</span>
+      <span class="logo-highlight" style="color: red;">International</span>
+      <span class="logo-main" style="color: red;">Ministries</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="ministries.html" class="nav-link">Ministries</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="sermons.html" class="nav-link active">The Word</a></li>
+      <li><a href="testimonies.html" class="nav-link">Testimonies</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="index.html#faq" class="nav-link">FAQs</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      <li><a href="donate.html" class="nav-link donate-btn">Donate</a></li>
+    </ul>
+
+    <div class="hamburger" aria-label="Mobile menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+  <!-- Sermons Section -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <h2>The Word</h2>
+        <p class="section-subtitle">Messages preached at JESUS International Ministries</p>
+      </header>
+
+      <div class="sermons-container">
+
+        <!-- Sermon: 10 May 2026 -->
+        <article class="sermon-card">
+          <div class="sermon-header">
+            <div class="sermon-date-badge">
+              <div class="day">10</div>
+              <div class="month-year">MAY 2026</div>
+            </div>
+            <div class="sermon-title-area">
+              <h2>Staying in the Lord</h2>
+              <div class="sermon-preacher"><i class="fas fa-user"></i> Prophet J. Chikambure</div>
+            </div>
+          </div>
+
+          <div class="sermon-body">
+            <div class="sermon-theme">
+              <i class="fas fa-bible"></i> Theme: Abiding in Christ &mdash; Living in His Word and Walking in Obedience
+            </div>
+
+            <!-- John 15:7 -->
+            <div class="scripture-block">
+              <div class="scripture-ref"><i class="fas fa-bookmark"></i> John 15:7</div>
+              <p class="scripture-text">"If you abide in Me, and My words abide in you, ask whatever you wish, and it will be done for you."</p>
+            </div>
+
+            <!-- Ephesians 2:1 -->
+            <div class="scripture-block">
+              <div class="scripture-ref"><i class="fas fa-bookmark"></i> Ephesians 2:1</div>
+              <p class="scripture-text">"And you were dead in the trespasses and sins."</p>
+            </div>
+
+            <!-- Ephesians 2:2 -->
+            <div class="scripture-block">
+              <div class="scripture-ref"><i class="fas fa-bookmark"></i> Ephesians 2:2</div>
+              <p class="scripture-text">"In which you once walked, following the course of this world, following the prince of the power of the air, the spirit that is now at work in the sons of disobedience."</p>
+            </div>
+
+            <!-- Ephesians 2:3 -->
+            <div class="scripture-block">
+              <div class="scripture-ref"><i class="fas fa-bookmark"></i> Ephesians 2:3</div>
+              <p class="scripture-text">"Among whom we all once lived in the passions of our flesh, carrying out the desires of the body and the mind, and were by nature children of wrath, like the rest of mankind."</p>
+            </div>
+
+            <!-- Ephesians 6:1 -->
+            <div class="scripture-block">
+              <div class="scripture-ref"><i class="fas fa-bookmark"></i> Ephesians 6:1</div>
+              <p class="scripture-text">"Children, obey your parents in the Lord, for this is right."</p>
+            </div>
+
+            <div class="sermon-notes">
+              <h4>Key Points</h4>
+              <ul>
+                <li>To stay in the Lord means to let His Word dwell in you constantly &mdash; John 15:7.</li>
+                <li>Before Christ, we were dead in sin, walking according to the ways of this world &mdash; Ephesians 2:1&ndash;2.</li>
+                <li>Our old nature was driven by the flesh and we were by nature children of wrath &mdash; Ephesians 2:3.</li>
+                <li>Staying in the Lord also means living obediently in every area of life, including honouring our parents &mdash; Ephesians 6:1.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>JESUS International Ministries</h3>
+          <p>Preaching the Gospel to all nations since 2020</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="sermons.html">The Word</a></li>
+            <li><a href="testimonies.html">Testimonies</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="index.html#faq">FAQs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Service Times</h4>
+          <p><i class="fas fa-clock"></i> Sundays from 8:00 AM</p>
+          <p><i class="fas fa-map-marker-alt"></i> Rusununguko Street, New Marimba</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+263772401528">+263 772 401 528</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 JESUS International Ministries. All Rights Reserved.</p>
+        <p>Founded in 2020 by Prophet J. Chikambure under Prophet T.B. Joshua</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/1AkiKS8Uua/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/263785585244" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/prophetchikambure_official" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@JerryChikambure-official1" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <aside class="chatbot-container" id="chatbot" aria-label="Ministry assistant chatbot">
+    <header class="chatbot-header">
+      <span class="chatbot-label">AI Chatbot</span>
+      <h3>Ministry Prayer Assistant</h3>
+      <button class="close-chat" aria-label="Close chatbot">&times;</button>
+    </header>
+
+    <div class="chatbot-messages" id="chat-messages">
+      <div class="message bot-message">
+        <div class="message-content">
+          <p>Hello! I'm here to help you. You can ask about:</p>
+          <ul>
+            <li>Service times (Sundays from 8:00 AM)</li>
+            <li>Prayer requests</li>
+            <li>Upcoming events</li>
+            <li>Location directions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Type your message..." aria-label="Type your message">
+      <button id="send-btn" aria-label="Send message" class="send-btn">
+        <i class="fas fa-paper-plane"></i>
+        <span class="send-text">Send</span>
+      </button>
+    </div>
+  </aside>
+
+  <button class="chatbot-btn" id="chatbot-toggler" aria-label="Open chatbot">
+    <i class="fas fa-comment-dots"></i>
+  </button>
+
+  <!-- Church Logo -->
+  <div class="church-logo">
+    <img src="https://i.imgur.com/GxYY3ve.jpg" alt="JESUS International Ministries Logo">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
