@@ -1,7 +1,6 @@
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-const navLinksItems = document.querySelectorAll('.nav-links li');
 
 if (hamburger) {
   hamburger.addEventListener('click', () => {
@@ -175,6 +174,7 @@ if (chatbotToggler && chatbot) {
     'address': 'Our physical address is Rusununguko Street, New Marimba. See you Sunday at 8:00 AM!',
     'contact': 'You can reach us at +263 785 585 244 (WhatsApp) or +263 772 401 528',
     'donate': 'Thank you for your interest in supporting the ministry! You can donate via Ecocash (+263 772 401 528 - E. Saupinda) or through our donation form.',
+    'sermon': 'You can read our latest sermons and Bible teachings on The Word page.',
     'founder': 'The founder of JESUS International Ministries is Jesus Christ. Prophet J. Chikambure is the general overseer from 2020 under Prophet T.B. Joshua.',
     'prophet': 'Our ministry is led by Prophet J. Chikambure, who was spiritually fathered by Prophet T.B. Joshua.',
     'children': 'We have a vibrant children\'s ministry during our Sunday services from 8:00 AM.',
@@ -188,30 +188,39 @@ if (chatbotToggler && chatbot) {
   // Process user message
   function processUserMessage(message) {
     message = message.toLowerCase();
-    
-    // Check for matching keywords
+
+    // Check for matching keywords as whole words, so short keywords like
+    // "hi" don't false-match inside words like "which" or "history"
     for (const [keyword, response] of Object.entries(botResponses)) {
-      if (message.includes(keyword)) {
+      if (new RegExp(`\\b${keyword}\\b`).test(message)) {
         return response;
       }
     }
-    
+
     return defaultResponse;
   }
-  
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
   // Add message to chat
   function addMessage(content, isUser = false) {
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('message');
     messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
-    
+
     const contentDiv = document.createElement('div');
     contentDiv.classList.add('message-content');
-    contentDiv.innerHTML = `<p>${content}</p>`;
-    
+    // Bot responses contain intentional <br> markup; user input is escaped
+    // so typed HTML/script text can't be rendered as markup
+    contentDiv.innerHTML = `<p>${isUser ? escapeHtml(content) : content}</p>`;
+
     messageDiv.appendChild(contentDiv);
     chatMessages.appendChild(messageDiv);
-    
+
     // Scroll to bottom
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
@@ -282,34 +291,9 @@ function sendToWhatsApp(form, formType) {
 if (document.querySelector('.faq-item')) {
   document.querySelector('.faq-item').classList.add('active');
 }
-// Function to send form data to WhatsApp
-function sendToWhatsApp(form, formType) {
-    // Prevent default form submission
-    event.preventDefault();
-    
-    // Get form values
-    const name = form.querySelector('[name="name"]').value;
-    const phone = form.querySelector('[name="phone"]').value;
-    
-    // Create WhatsApp message based on form type
-    let message = '';
-    
-    if (formType === 'contact') {
-        const userMessage = form.querySelector('[name="message"]').value;
-        message = `New Contact Form Submission:\n\nName: ${name}\nPhone: ${phone}\nMessage: ${userMessage}`;
-    } else if (formType === 'donation') {
-        const amount = form.querySelector('[name="amount"]').value;
-        message = `New Donation Form Submission:\n\nName: ${name}\nPhone: ${phone}\nAmount: $${amount} USD`;
-    }
-    
-    // Encode message for URL (using proper line breaks)
-    const encodedMessage = encodeURIComponent(message).replace(/%0A/g, '%0D%0A');
-    
-    // Open WhatsApp with pre-filled message
-    window.open(`https://wa.me/263785585244?text=${encodedMessage}`, '_blank');
-    
-    // Reset form
-    form.reset();
-    
-    return false;
+
+// Keep footer copyright year current
+const copyrightYearEl = document.getElementById('copyright-year');
+if (copyrightYearEl) {
+  copyrightYearEl.textContent = new Date().getFullYear();
 }
