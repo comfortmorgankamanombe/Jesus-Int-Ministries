@@ -568,15 +568,30 @@ img {
 }
 
 .contact-line a {
-  color: var(--deep-purple);
+  display: inline-block;
+  background: var(--light-purple);
+  color: var(--primary-purple);
   text-decoration: none;
   font-weight: 600;
+  padding: 0.35rem 0.9rem;
+  border-radius: 2rem;
   transition: var(--transition);
 }
 
 .contact-line a:hover {
-  color: var(--primary-purple);
-  text-decoration: underline;
+  background: var(--primary-purple);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.contact-line:has(.whatsapp-icon) a {
+  background: #e8faf0;
+  color: #128c4a;
+}
+
+.contact-line:has(.whatsapp-icon) a:hover {
+  background: #25d366;
+  color: var(--white);
 }
 
 .social-links {
