@@ -739,6 +739,17 @@ img {
   color: var(--gold);
 }
 
+.footer-contact a {
+  color: var(--white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-contact a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 1.5rem;
@@ -1109,20 +1120,55 @@ img {
   }
   
   /* Footer */
+  .footer {
+    padding-top: 2.25rem;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
   }
-  
+
+  .footer-logo p {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
   .footer-links ul {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     justify-content: center;
-    gap: 1rem;
+    column-gap: 1.75rem;
+    row-gap: 0.5rem;
+    text-align: left;
   }
-  
+
+  .footer-links li {
+    margin-bottom: 0;
+  }
+
   .footer-contact p {
     justify-content: center;
+  }
+
+  .footer-bottom {
+    padding-top: 1.1rem;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-social {
+    margin-top: 0.75rem;
+  }
+
+  .footer-social a {
+    width: 32px;
+    height: 32px;
   }
 
   /* Chatbot send button on mobile */
@@ -1140,6 +1186,12 @@ img {
   .logo {
     font-size: 1rem;
     max-width: 50%;
+  }
+
+  .footer-links ul {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 
   .hero-slider {
