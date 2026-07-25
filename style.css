@@ -567,6 +567,18 @@ img {
   color: #25d366;
 }
 
+.contact-line a {
+  color: var(--deep-purple);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.contact-line a:hover {
+  color: var(--primary-purple);
+  text-decoration: underline;
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
