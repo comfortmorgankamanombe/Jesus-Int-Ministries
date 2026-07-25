@@ -548,6 +548,25 @@ img {
   font-size: 1rem;
 }
 
+.contact-line {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.info-card .contact-line-icon {
+  font-size: 1.1rem;
+  color: var(--primary-purple);
+  margin-bottom: 0;
+  width: 1.3rem;
+  text-align: center;
+}
+
+.info-card .contact-line-icon.whatsapp-icon {
+  color: #25d366;
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
