@@ -166,6 +166,45 @@ img {
   white-space: nowrap;
 }
 
+.header-clock {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--light-purple);
+  border-radius: 2rem;
+  color: var(--deep-purple);
+}
+
+.clock-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2ecc71;
+  flex-shrink: 0;
+  animation: clockPulse 2s ease-in-out infinite;
+}
+
+@keyframes clockPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.clock-time {
+  font-family: 'Courier New', Courier, monospace;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.clock-tz {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
 .logo-main {
   color: var(--red);
 }
@@ -403,7 +442,7 @@ img {
   color: var(--gold);
 }
 
-/* Hero Verse — plain flowing subtext beneath the headline, not a boxed callout */
+/* Hero Verse: plain flowing subtext beneath the headline, not a boxed callout */
 .hero-verse-block {
   max-width: 620px;
   margin: 0 auto 1.5rem;
@@ -1204,10 +1243,14 @@ img {
 
 /* === Mobile Responsiveness === */
 @media (max-width: 992px) {
+  .header-clock {
+    display: none;
+  }
+
   .section {
     padding: 3rem 0;
   }
-  
+
   .hero-verse {
     font-size: 1.1rem;
   }

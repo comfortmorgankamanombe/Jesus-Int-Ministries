@@ -1,3 +1,23 @@
+// Live Harare clock in the header
+const clockEls = document.querySelectorAll('[data-clock]');
+if (clockEls.length) {
+  const clockFormatter = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Africa/Harare',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  });
+
+  const tickClock = () => {
+    const time = clockFormatter.format(new Date());
+    clockEls.forEach(el => { el.textContent = time; });
+  };
+
+  tickClock();
+  setInterval(tickClock, 1000);
+}
+
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
