@@ -251,9 +251,9 @@ img {
   top: calc(100% + 0.75rem);
   left: 50%;
   transform: translateX(-50%) translateY(6px);
-  background: var(--white);
-  border-radius: 0.6rem;
-  box-shadow: var(--shadow-md);
+  background: var(--deep-purple);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-lg);
   list-style: none;
   padding: 0.5rem;
   min-width: 170px;
@@ -277,15 +277,20 @@ img {
 
 .nav-dropdown-menu .nav-link {
   display: block;
-  padding: 0.55rem 0.75rem;
-  border-radius: 0.4rem;
+  color: var(--white);
+  font-size: 1rem;
+  padding: 0.8rem 1.25rem;
+  border-radius: 0.5rem;
   border-bottom: none;
   white-space: nowrap;
+  opacity: 0.85;
 }
 
 .nav-dropdown-menu .nav-link:hover,
 .nav-dropdown-menu .nav-link.active {
-  background: var(--light-purple);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--gold);
+  opacity: 1;
   border-bottom: none;
 }
 
@@ -326,7 +331,7 @@ img {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 600px;
+  min-height: 650px;
   overflow: hidden;
   background: linear-gradient(135deg, var(--primary-purple) 0%, var(--deep-purple) 100%);
   color: var(--text-light);
@@ -345,7 +350,7 @@ img {
   opacity: 0;
   transition: opacity 1s ease;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
@@ -357,74 +362,96 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.6);
+  filter: brightness(0.95) saturate(1.05);
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.slide-content {
+/* Bottom-weighted gradient so text sits on the darkest part of the photo
+   instead of a flat overlay dimming the whole image evenly */
+.slide::after {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(20, 8, 35, 0.1) 0%, rgba(20, 8, 35, 0.35) 50%, rgba(20, 8, 35, 0.93) 100%);
+  z-index: 1;
+}
+
+.slide-content {
+  position: relative;
   text-align: center;
   color: var(--text-light);
   width: 90%;
   max-width: 800px;
   z-index: 2;
   padding: 0 1.25rem;
+  padding-bottom: 6.5rem;
   animation: fadeInUp 1s;
 }
 
 .slide-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5em;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-  letter-spacing: 1px;
+  font-size: clamp(2.25rem, 6vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.45em;
+  text-shadow: 2px 2px 14px rgba(0,0,0,0.5);
+  letter-spacing: 0.5px;
 }
 
-/* Hero Verse Block */
+.slide-content h1 .accent {
+  color: var(--gold);
+}
+
+/* Hero Verse — plain flowing subtext beneath the headline, not a boxed callout */
 .hero-verse-block {
-  background: rgba(230, 194, 0, 0.1);
-  border-left: 4px solid var(--gold);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  margin: 1.5rem auto;
-  max-width: 700px;
-  backdrop-filter: blur(5px);
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
   animation: fadeIn 1.5s;
 }
 
 .hero-verse {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 400;
   color: var(--text-light);
   font-style: italic;
+  opacity: 0.92;
   margin-bottom: 0.5rem;
-  line-height: 1.4;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  line-height: 1.5;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
 }
 
 .hero-verse-ref {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: var(--gold);
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 }
 
 .hero-cta-group {
   display: flex;
-  gap: 1rem;
+  gap: 1.1rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1.75rem;
+  margin-top: 0.5rem;
   animation: fadeIn 2s;
 }
 
 .hero-cta-group .btn {
-  font-size: 1.05rem;
-  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 1rem 2.4rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero-cta-group .btn-gold {
+  box-shadow: 0 6px 20px rgba(230, 194, 0, 0.45);
+}
+
+.hero-cta-group .btn-outline {
+  border-width: 2px;
 }
 
 .slider-dots {
@@ -1181,12 +1208,8 @@ img {
     padding: 3rem 0;
   }
   
-  .slide-content h1 {
-    font-size: 2.2rem;
-  }
-  
   .hero-verse {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -1283,17 +1306,13 @@ img {
   .hero-slider {
     min-height: 500px;
   }
-  
-  .slide-content h1 {
-    font-size: 2rem;
+
+  .slide-content {
+    padding-bottom: 4rem;
   }
-  
+
   .hero-verse {
-    font-size: 1.1rem;
-  }
-  
-  .hero-verse-ref {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   
   /* Ministries Grid */
@@ -1399,15 +1418,8 @@ img {
   .hero-slider {
     min-height: 450px;
   }
-  
-  .slide-content h1 {
-    font-size: 1.8rem;
-  }
-  
-  .hero-verse-block {
-    padding: 1rem;
-  }
-  
+
+
   .hero-verse {
     font-size: 1rem;
   }
