@@ -906,6 +906,13 @@ img {
   resize: vertical;
 }
 
+.contact-form .btn,
+.donation-form .btn {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
 /* === Donate Section === */
 .donation-form {
   max-width: 600px;
@@ -1004,9 +1011,9 @@ img {
 
 .footer-social {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 
 .footer-social a {
@@ -1427,6 +1434,7 @@ img {
   }
 
   .footer-social {
+    justify-content: center;
     margin-top: 0.75rem;
   }
 
