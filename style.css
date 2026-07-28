@@ -1250,10 +1250,6 @@ img {
 
 /* === Mobile Responsiveness === */
 @media (max-width: 992px) {
-  .header-clock {
-    display: none;
-  }
-
   .section {
     padding: 3rem 0;
   }
@@ -1282,12 +1278,19 @@ img {
     margin-left: auto;
   }
 
+  .header-clock {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.6rem;
+  }
+
   .nav-links {
     position: fixed;
-    top: 70px;
+    top: 112px;
     left: -100%;
     width: 70%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 112px);
     background: var(--white);
     flex-direction: column;
     align-items: flex-start;
